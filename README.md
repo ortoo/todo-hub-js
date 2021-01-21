@@ -1,6 +1,6 @@
 # TodoHub - The GovernorHub Developer Test
 
-_This is the plain JS version of the test, if you want to have a go at the Typescript version, go to [https://github.com/ortoo/todo-hub]_
+_This is the plain JS version of the test, if you want to have a go at the Typescript version, go to https://github.com/ortoo/todo-hub_
 
 ## Introduction
 
