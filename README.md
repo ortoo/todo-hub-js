@@ -1,5 +1,7 @@
 # TodoHub - The GovernorHub Developer Test
 
+_This is the plain JS version of the test, if you want to have a go at the Typescript version, go to [https://github.com/ortoo/todo-hub]_
+
 ## Introduction
 
 TodoHub is a simple "todo list" application in need of some love and care. TodoHub in its current iteration has the ability to list todo items, as well as add new todo items, but in order for it to become usable it needs some extra functionality. Your job is to implement that extra functionaility, you are also welcome to dazzle us with any extras you have up your sleeve, within the time allocated.
@@ -14,11 +16,11 @@ At GovernorHub we think its important to strive to write the best software, usin
 
 ## The Stack
 
-TodoHub is a [React](https://reactjs.org/) application using the [Next.js](https://nextjs.org/) framework, with [Material UI](https://material-ui.com/) as a UI component library using [Typescript](https://www.typescriptlang.org/) as the coding language. (_gosh that's a mouthful_).
+TodoHub is a [React](https://reactjs.org/) application using the [Next.js](https://nextjs.org/) framework, with [Material UI](https://material-ui.com/) as a UI component library using Javascript as the coding language. (_gosh that's a mouthful_).
 
 The styling solution is a little bit different to normal CSS, where a CSS-in-JS solution is used that is built into Material UI. Details of how this works can be found [here](https://material-ui.com/styles/basics/). If you are familiar with CSS it shouldn't be much of a problem to adapt to.
 
-Despite this seemingly complex stack of non-standard frameworks and libraries, the test is designed to be completed by developers who have no experience in them, and can most definitely be completed by those who have only experienced Javascript rather than Typescript. (_Typescript is a super-set of Javascript, so Javascript can be used just fine with no issues, if you give an object a type of "any", but be aware this is bad Typescript practise_).
+Despite this seemingly complex stack of non-standard frameworks and libraries, the test is designed to be completed by developers who have no experience in them, and can most definitely be completed by those who have only experienced Javascript.
 
 The idea is that the skeleton of the application and the instructions in this **README** are enough to carry out the tasks required.
 
@@ -45,14 +47,13 @@ For example:
 import React, { useState } from "react";
 
 // material-ui imports
-import Dialog, { DialogProps } from "@material-ui/core/Dialog";
+import Dialog from "@material-ui/core/Dialog";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogActions from "@material-ui/core/DialogActions";
 import Button from "@material-ui/core/Button";
 
 // internal imports
-import { TodoItem } from "../TodoItem";
 import TodoItemForm from "../TodoItemForm";
 ```
 
@@ -63,7 +64,7 @@ _Note: there is what seems to be a bug with `material-ui` imports and VSCode_
 
 // Although this way will work, it does not enable tree-shaking (all the components will be imported rather than only what we need)
 // This can be mitigated using babel, but this project will not tree-shake properly
-// Wrong (but if you did it this way consistently it isn't a massive issue as long as you are aware of tbe pitfalls)
+// Wrong (but if you did it this way consistently it isn't a massive issue as long as you are aware of the pitfalls)
 import { Dialog } from "@material-ui-/core"
 
 // VSCode will also try to do this, if you leave imports like this in projects, then styles can be loaded in twice, casuing some odd CSS issues down the road
@@ -89,7 +90,6 @@ We won't go into too much detail here as we are sure you already have these thin
 
 - A code editor, we recommend [Visual Studio Code](https://code.visualstudio.com/).
 - [Node.js & NPM](https://nodejs.org/en/), npm comes with node, get version 14 at the very least and make sure it is configured in your PATH.
-- The latest version of Typescript, which can be installed globally using `npm install -g typescript` after you have installed npm in the previous step.
 - Yourself and a couple of hours of your time.
 
 ### Setup
@@ -107,8 +107,8 @@ We won't go into too much detail here as we are sure you already have these thin
 
 ### Structure
 
-`/pages/index.tsx` is the home page of the application, you shouldn't need another page for what is being asked, so everything can go through this file. If you were to create another page, you would create another folder in `/pages` with an `index.tsx` inside, whatever you named the folder would be the url route of the page.
-For example `/pages/login/index.tsx` would be accessible via `localhost:3000/login`
+`/pages/index.jsx` is the home page of the application, you shouldn't need another page for what is being asked, so everything can go through this file. If you were to create another page, you would create another folder in `/pages` with an `index.jsx` inside, whatever you named the folder would be the url route of the page.
+For example `/pages/login/index.jsx` would be accessible via `localhost:3000/login`
 
 `/src/components` is where the components for the application live. It has 2 folders:
 
