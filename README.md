@@ -1,6 +1,6 @@
 # TodoHub - GovernorHub & The Key Developer Test
 
-_This is the Typescript version of the test, if you want to have a go at the plain JS version, go to https://github.com/ortoo/todo-hub-js_
+_This is the Javascript version of the test, if you want to have a go at the Typescript version, go to https://github.com/ortoo/todo-hub_
 
 ## Introduction
 
@@ -18,11 +18,11 @@ At GovernorHub we think its important to strive to write the best software, usin
 
 ## The Stack
 
-TodoHub is a [React](https://reactjs.org/) application using the [Next.js](https://nextjs.org/) framework, with [MUI](https://mui.com/) as a UI component library using [Typescript](https://www.typescriptlang.org/) as the coding language. (_gosh that's a mouthful_).
+TodoHub is a [React](https://reactjs.org/) application using the [Next.js](https://nextjs.org/) framework, with [MUI](https://mui.com/) as a UI component library using Javascript as the coding language. (_gosh that's a mouthful_).
 
 The styling solution is a little bit different to normal CSS, where a CSS-in-JS solution is used that is built into MUI. Details of how this works can be found [here](https://mui.com/system/basics/). If you are familiar with CSS it shouldn't be much of a problem to adapt to.
 
-Despite this seemingly complex stack of non-standard frameworks and libraries, the test is designed to be completed by developers who have no experience in them, and can most definitely be completed by those who have only experienced Javascript rather than Typescript. (_Typescript is a super-set of Javascript, so Javascript can be used just fine with no issues if you give an object a type of "any", but be aware this is bad Typescript practise_).
+Despite this seemingly complex stack of non-standard frameworks and libraries, the test is designed to be completed by developers who have no experience in them.
 
 The idea is that the skeleton of the application and the instructions in this **README** are enough to carry out the tasks required.
 
@@ -49,14 +49,13 @@ For example:
 import React, { useState } from "react";
 
 // mui imports
-import Dialog, { DialogProps } from "@mui/material/Dialog";
+import Dialog from "@mui/material/Dialog";
 import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
 import Button from "@mui/material/Button";
 
 // internal imports
-import { TodoItem } from "../TodoItem";
 import TodoItemForm from "../TodoItemForm";
 ```
 
@@ -76,7 +75,6 @@ You can either get setup locally on your own machine, or just use the [Github Co
 
 - A code editor, we recommend [Visual Studio Code](https://code.visualstudio.com/).
 - [Node.js & NPM](https://nodejs.org/en/), npm comes with node, get version 14 at the very least and make sure it is configured in your PATH.
-- The latest version of Typescript, which can be installed globally using `npm install -g typescript` after you have installed npm in the previous step.
 - Yourself and a few hours of your time.
 
 ### Setup (Local)
@@ -94,8 +92,8 @@ You can either get setup locally on your own machine, or just use the [Github Co
 
 ### Structure
 
-`/pages/index.tsx` is the home page of the application, you shouldn't need another page for what is being asked, so everything can go through this file. If you were to create another page, you would create another folder in `/pages` with an `index.tsx` inside, whatever you named the folder would be the url route of the page.
-For example `/pages/login/index.tsx` would be accessible via `localhost:3000/login`
+`/pages/index.jsx` is the home page of the application, you shouldn't need another page for what is being asked, so everything can go through this file. If you were to create another page, you would create another folder in `/pages` with an `index.jsx` inside, whatever you named the folder would be the url route of the page.
+For example `/pages/login/index.jsx` would be accessible via `localhost:3000/login`
 
 `/src/components` is where the components for the application live. It has 2 folders:
 

@@ -5,11 +5,7 @@ import Head from "next/head";
 
 import CssBaseline from "@mui/material/CssBaseline";
 
-import {
-  ThemeProvider,
-  Theme,
-  StyledEngineProvider,
-} from "@mui/material/styles";
+import { ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
 
 import theme from "../src/theme";
 
