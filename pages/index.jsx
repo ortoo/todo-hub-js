@@ -7,12 +7,11 @@ import Container from "@mui/material/Container";
 
 import TodoList from "../src/components/todoItem/list/TodoList";
 import CreateTodoItemDialog from "../src/components/todoItem/create/CreateTodoItemDialog";
-import { TodoItem } from "../src/components/todoItem/TodoItem";
 
 // this is the main page of the application, it is not expected that you would need another page
 const Index = () => {
   // the "saved" todo items that will display to the user.
-  const [todoItems, setTodoItems] = useState<TodoItem[]>([]);
+  const [todoItems, setTodoItems] = useState([]);
 
   const [createTodoDialogOpen, setCreateTodoDialogOpen] = useState(false);
 

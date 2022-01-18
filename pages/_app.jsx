@@ -1,5 +1,5 @@
 import React from "react";
-import type { AppProps } from "next/app";
+
 import PropTypes from "prop-types";
 import Head from "next/head";
 
@@ -15,7 +15,7 @@ import theme from "../src/theme";
 
 import Header from "../src/components/header/Header";
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps }) {
   React.useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector("#jss-server-side");

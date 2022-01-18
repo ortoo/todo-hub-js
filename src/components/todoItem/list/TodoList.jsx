@@ -5,20 +5,12 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 
-import { SxProps, Theme } from "@mui/material/styles";
-
 import WarningIcon from "@mui/icons-material/Warning";
 
-import { TodoItem } from "../TodoItem";
 import TodoItemCard from "../TodoItemCard";
 
-interface Props {
-  sx?: SxProps<Theme>;
-  todoItems: TodoItem[];
-}
-
 // This component renders the list of todo items as well as anything else in the context of a todo list
-const TodoList = ({ sx = [], todoItems }: Props) => {
+const TodoList = ({ sx = [], todoItems }) => {
   const todoItemsCount = todoItems?.length || 0;
 
   return (

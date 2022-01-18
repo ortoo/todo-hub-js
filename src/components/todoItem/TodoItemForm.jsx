@@ -2,15 +2,8 @@ import React from "react";
 
 import TextField from "@mui/material/TextField";
 
-import { TodoItem } from "./TodoItem";
-
-interface Props {
-  todoItem: TodoItem;
-  onChange: (updatedTodoItem: TodoItem) => void;
-}
-
 // The todo form that appears inside the create modal, could be used for edit too perhaps?
-const TodoItemForm = ({ todoItem, onChange }: Props) => {
+const TodoItemForm = ({ todoItem, onChange }) => {
   const { title, description } = todoItem;
 
   return (
